@@ -16,6 +16,9 @@ const ResultShowScreen = ({navigation}) => {
     useEffect(()=>{
         getResult(id);
     }, [])
+    if(!result){
+        return null;
+    }
     return (
         <View>
             <Text>{navigation.getParam('id')}</Text>
